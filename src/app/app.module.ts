@@ -1,25 +1,71 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, AlertController } from 'ionic-angular';
+import { MyApp } from './app.component';
+
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/Home/Home';
+import { LandingPage } from '../pages/landing/landing';
+import { PageonePage } from '../pages/pageone/pageone';
+import { BarPage } from '../pages/bar/bar';
 
+//imports above app.module.ts
+
+
+
+
+const firebaseAuth = {
+    apiKey: "AIzaSyCWwFeMgoN5mFqXzksNVo2k2EU7vWvPaKo",
+    authDomain: "yourday-f2e71.firebaseapp.com",
+    databaseURL: "https://yourday-f2e71.firebaseio.com",
+    projectId: "yourday-f2e71",
+    storageBucket: "yourday-f2e71.appspot.com",
+    messagingSenderId: "1073629492556"
+  };
+
+
+
+
+
+
+
+//cloudsettings (***)
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '7ea43225'
+  }
+};
+//cloudsettings (***)
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LandingPage,
+    PageonePage,
+    BarPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LandingPage,
+    PageonePage,
+    BarPage
   ],
   providers: [
     StatusBar,
