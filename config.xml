@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>MyApp</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>MAD Prototype</name>
+    <description> A prototype Ionic/Cordova app to demonstrate mobile application security .</description>
+    <author email="go.nicholas@gmail.com" href="http://ionicframework.com/">Nick G.</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
@@ -84,6 +84,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
-    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
+    <plugin name="cordova-sqlite-storage" spec="^2.0.4" />
     <plugin name="ionic-plugin-deploy" spec="^0.6.7" />
+    <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
 </widget>

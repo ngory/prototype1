@@ -33,8 +33,8 @@ alert(message: string) {
 
 
 
-registerUser() {
-  this.fire.auth.createUserWithEmailAndPassword(this.username.value, this.password.value)
+async registerUser() {
+ const result = await this.fire.auth.createUserWithEmailAndPassword(this.username.value, this.password.value)
   .then(data => { 
   console.log('got data ', data);
   this.alert('Success! You\'re now registered');

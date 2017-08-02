@@ -1,10 +1,16 @@
+
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase/app';
+
+
 import { Component, ViewChild } from '@angular/core';
 
 import { Deploy} from '@ionic/cloud-angular';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 
 import { HomePage } from '../pages/Home/Home';
 import { LandingPage } from '../pages/landing/landing';

@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the BarPage page.
  *
@@ -15,7 +16,10 @@ import { NavController, NavParams } from 'ionic-angular';
 export class BarPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  } 
+
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BarPage');

@@ -1,5 +1,7 @@
 import { LandingPage } from '../landing/landing';
 import { PageonePage } from '../pageone/pageone';
+import { ProfilePage } from '../profile/profile';
+
 
 import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController, NavParams } from 'ionic-angular';
@@ -24,6 +26,7 @@ export class HomePage {
 
 
 
+
 alert(message: string) {
     this.alertCtrl.create({
       title: 'Hey!',
@@ -33,12 +36,12 @@ alert(message: string) {
   }
 
 
-signIn() {
+async signIn() {
     this.fire.auth.signInWithEmailAndPassword(this.username.value, this.password.value)
     .then( data => {
       console.log('got some data', this.fire.auth.currentUser);
       this.alert('Success! You\'re logged in');
-      this.navCtrl.setRoot( PageonePage );
+      this.navCtrl.setRoot( 'ProfilePage' );
       // user is logged in
     })
     .catch( error => {
