@@ -19,6 +19,7 @@ import { HomePage } from '../pages/Home/Home';
 import { LandingPage } from '../pages/landing/landing';
 import { PageonePage } from '../pages/pageone/pageone';
 import { BarPage } from '../pages/bar/bar';
+import { TestPage } from '../pages/test/test';
 
 
 
@@ -49,7 +50,8 @@ const cloudSettings: CloudSettings = {
     HomePage,
     LandingPage,
     PageonePage,
-    BarPage
+    BarPage,
+    TestPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ const cloudSettings: CloudSettings = {
     HomePage,
     LandingPage,
     PageonePage,
-    BarPage
+    BarPage,
+    TestPage
   ],
   providers: [
     StatusBar,

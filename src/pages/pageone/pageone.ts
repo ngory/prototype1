@@ -1,3 +1,4 @@
+import { TestPage } from '../test/test';
 import { BarPage } from '../bar/bar';
 import { Profile } from '../../models/profile';
 
@@ -28,10 +29,12 @@ import { Storage } from '@ionic/storage';
 export class PageonePage {
    profileData: FirebaseObjectObservable<Profile>
    barPage = BarPage;
+
    items: any;
    email: string;
-
    
+   
+  
 
 
   constructor(private toast: ToastController, private fire: AngularFireAuth, private afDatabase: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
@@ -58,10 +61,15 @@ this.fire.authState.take(1).subscribe(data => {
 })
 }
 
-clearData() {
-  this.storage.clear();
+profilePage() {
+  this.navCtrl.push('ProfilePage')
 }
 
+clearData() {
+  this.storage.clear()
+  this.navCtrl.push(PageonePage);
+  // setRoot(this.navCtrl.getActive().component);
+}
 
 doRefresh(refresher){
     this.storage.get('myStore').then((data) => {
@@ -88,6 +96,9 @@ doRefresh(refresher){
     });
   };
 }
+
+
+
 
 
 // getData(){ this.storage.get('myStore').then((val) => {

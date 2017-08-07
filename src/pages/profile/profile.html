@@ -23,7 +23,7 @@ You're signed in as {{email}}
 
 <ion-item>
   <ion-label floating>Firstname</ion-label>
-  <ion-input [(ngModel)]="profile.firstName"></ion-input>
+  <ion-input  [(ngModel)]="profile.firstName"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -31,7 +31,7 @@ You're signed in as {{email}}
   <ion-input [(ngModel)]="profile.lastName"></ion-input>
 </ion-item>
 
-<button ion-button clear block (click)="createProfile()">Create Profile</button>
+<button ion-button clear block (click)="editProfile()">Save Profile</button>
 
 
 

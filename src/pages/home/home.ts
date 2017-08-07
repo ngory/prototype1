@@ -1,6 +1,7 @@
 import { LandingPage } from '../landing/landing';
 import { PageonePage } from '../pageone/pageone';
 import { ProfilePage } from '../profile/profile';
+import { TestPage } from '../test/test';
 
 
 import { Component, ViewChild } from '@angular/core';
@@ -41,7 +42,7 @@ async signIn() {
     .then( data => {
       console.log('got some data', this.fire.auth.currentUser);
       this.alert('Success! You\'re logged in');
-      this.navCtrl.setRoot( 'ProfilePage' );
+      this.navCtrl.setRoot( TestPage );
       // user is logged in
     })
     .catch( error => {
