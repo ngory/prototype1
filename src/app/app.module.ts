@@ -9,8 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireDatabaseModule, FirebaseObjectObservable } from 'angularfire2/database';
 import { IonicStorageModule } from '@ionic/storage'; 
-
-
+import { HttpModule } from '@angular/http';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,6 +19,8 @@ import { LandingPage } from '../pages/landing/landing';
 import { PageonePage } from '../pages/pageone/pageone';
 import { BarPage } from '../pages/bar/bar';
 import { TestPage } from '../pages/test/test';
+import { GreenPage } from '../pages/green/green';
+import { RedPage } from '../pages/red/red';
 
 
 
@@ -51,7 +52,9 @@ const cloudSettings: CloudSettings = {
     LandingPage,
     PageonePage,
     BarPage,
-    TestPage
+    TestPage,
+    GreenPage,
+    RedPage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ const cloudSettings: CloudSettings = {
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HttpModule
 
   ],
   bootstrap: [IonicApp],
@@ -70,7 +74,9 @@ const cloudSettings: CloudSettings = {
     LandingPage,
     PageonePage,
     BarPage,
-    TestPage
+    TestPage,
+    GreenPage,
+    RedPage
   ],
   providers: [
     StatusBar,

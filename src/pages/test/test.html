@@ -15,9 +15,14 @@
 
 <ion-content padding>
 
-  <button ion-button color="danger" block outline color="danger" (click)="viewprofilePage()">View Profile</button>
-This is a test page to show how fast i can navigate between pages!
-
-
-
+  <button ion-button color="primary" block outline color="primary" (click)="viewprofilePage()">Firebase Profile</button>
+  Edit a user profile using the secure firebase database backend
+<button ion-button color="secondary" block outline color="secondary" (click)="viewGreenPage()">Secure Login</button>
+Login information is sent over a secure network with TLS
+<button ion-button color="danger" block outline color="danger" (click)="viewRedPage()">Unsecure Login</button>
+Login information is sent over an unsecure HTTP network
 </ion-content>
+
+
+
+

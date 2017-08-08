@@ -16,6 +16,8 @@ import { HomePage } from '../pages/Home/Home';
 import { LandingPage } from '../pages/landing/landing';
 import { PageonePage } from '../pages/pageone/pageone';
 import { BarPage } from '../pages/bar/bar';
+import { TestPage } from '../pages/test/test';
+
 
 
 
@@ -27,7 +29,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage:any = HomePage;
+  rootPage:any = TestPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
